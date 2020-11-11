@@ -43,12 +43,12 @@ void great() {
 }
 
 void gridPrint(std::vector<char> grid) {
-  std::cout << "\n\n";
+  
   std::cout << grid[0] << " | " << grid[1] << " | " << grid[2];
   std::cout << "\n-- -- --\n";
   std::cout << grid[3] << " | " << grid[4] << " | " << grid[5];
   std::cout << "\n-- -- --\n";
   std::cout << grid[6] << " | " << grid[7] << " | " << grid[8] << "\n\n";
-
+  
 
 }
