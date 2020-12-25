@@ -2,6 +2,16 @@
 #include <vector>
 
 bool endGame(std::vector<char> grid,bool game) {
+  int gridCount = 0;
+  for(int i = 0; i < grid.size(); i++) {
+    if (grid[i] == 'X' || grid[i] == 'O') {
+      gridCount++;
+    }
+  }
+  if (gridCount == 9) {
+      std::cout << "Tie";
+      game = false;
+    }
   if(grid[0] == grid[1] && grid[0] == grid[2]) {
     game = false;
     std::cout << grid[1] << " won.";
@@ -43,7 +53,8 @@ void great() {
 }
 
 void gridPrint(std::vector<char> grid) {
-  
+
+  std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
   std::cout << grid[0] << " | " << grid[1] << " | " << grid[2];
   std::cout << "\n-- -- --\n";
   std::cout << grid[3] << " | " << grid[4] << " | " << grid[5];
